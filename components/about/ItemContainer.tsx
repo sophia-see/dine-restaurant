@@ -1,8 +1,8 @@
 import React from 'react'
 
-export default function ItemContainer({children}: {children: React.ReactNode}) {
+export default function ItemContainer({className, children}: {className?: string, children: React.ReactNode}) {
   return (
-    <div className="flex flex-col justify-center items-center gap-9 md:gap-[39px] md:mx-[58px]">
+    <div className={`flex flex-col justify-center items-center xl:items-start gap-9 md:gap-[39px] md:mx-[58px] xl:mx-0 ${className || ""}`}>
       {children}
     </div>
   )

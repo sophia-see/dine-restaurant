@@ -12,7 +12,7 @@ import useDeviceSize from '@/hooks/use-device-size'
 
 function ImageContainer ({children}: {children:React.ReactNode}) {
   return (
-    <div className='relative h-[400px] md:h-[360px]'>
+    <div className='xl:flex-shrink-0 relative h-[400px] md:h-[360px] xl:h-[720px] xl:w-[540px]'>
       {children}
     </div>
   )
@@ -23,8 +23,8 @@ export default function About() {
 
   return (
     <section>
-      <div className="relative h-[662px] md:h-[675px]">
-        <AboutItem className="absolute top-[-72px] md:top-[-96px]">
+      <div className="relative h-[662px] md:h-[690px]">
+        <AboutItem className="absolute top-[-72px] md:top-[-96px] lg:top-[-68px] h-full overflow-visible ">
           <ImageContainer>
             <Image
               src={`/images/homepage/enjoyable-place-${currSize}.jpg`}
@@ -32,7 +32,7 @@ export default function About() {
               width={0}
               height={0}
               alt="a place full of nature"
-              className="w-full h-full shadow-[0_75px_100px_-50px_rgba(56,66,85,50%)]"
+              className="w-full h-full shadow-[0_75px_100px_-50px_rgba(56,66,85,50%)] object-cover object-center"
             />
           </ImageContainer>
           <ItemContainer>
@@ -48,7 +48,7 @@ export default function About() {
             </Item>
           </ItemContainer>   
         </AboutItem>
-        <div className='hidden md:block absolute top-[50%] right-[50%] -translate-y-[70%]'>
+        <div className='hidden md:block absolute top-[50%] right-[50%] left-0 xl:right-[10%] -translate-y-[70%]'>
           <Image
             src={"/images/patterns/pattern-curve-top-right.svg"}
             sizes='100vw'
@@ -59,7 +59,7 @@ export default function About() {
           />
         </div>
       </div>
-      <AboutItem className='relative h-full md:pb-[118px]'>
+      <AboutItem className='relative h-full pb-[101px] md:pb-[118px] xl:pb-0 xl:h-[640px] xl:overflow-visible'>
         <ImageContainer>
           <Image
             src={`/images/homepage/locally-sourced-${currSize}.jpg`}
@@ -67,20 +67,20 @@ export default function About() {
             width={0}
             height={0}
             alt="a freshly cooked food"
-            className="w-full h-full shadow-[0_75px_100px_-50px_rgba(56,66,85,50%)]"
+            className="w-full h-full shadow-[0_75px_100px_-50px_rgba(56,66,85,50%)] xl:shadow-none object-cover object-center"
           />
-          <div className='hidden md:block absolute top-[70%] right-[-10%]'>
+          <div className='hidden md:block absolute top-[70%] xl:top-[40%] right-[-10%]'>
             <Image
               src={"/images/patterns/pattern-lines.svg"}
               sizes='100vw'
               width={0}
               height={0}
-              className='w-auto h-auto'
+              className='w-auto h-auto xl:z-10'
               alt='lines pattern'
             />
           </div>
         </ImageContainer>
-        <ItemContainer>
+        <ItemContainer className='lg:order-first'>
           <Divider />
           <Item>
             <ItemTitle
@@ -92,7 +92,7 @@ export default function About() {
             />
           </Item>
         </ItemContainer>
-        <div className='hidden md:block absolute bottom-0 -right-[67%] overflow-hidden'>
+        <div className='hidden md:block absolute bottom-0 -right-[67%] xl:right-[0px] overflow-hidden'>
           <Image
             src={"/images/patterns/pattern-curve-top-left.svg"}
             sizes='100vw'

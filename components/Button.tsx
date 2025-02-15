@@ -15,7 +15,7 @@ const Button: React.FC<ButtonProps> = ({
   const baseStyles = "py-6 flex justify-center uppercase font-semibold text-[17px] leading-[16px] tracking-[2.5px] transition duration-200";
   
   const variantStyles = {
-    default: "bg-cod-gray text-white hover:bg-cod-gray-75",
+    default: "bg-cod-gray text-white hover:border hover:border-cod-gray hover:text-cod-gray hover:bg-transparent",
     outline: "border border-white text-white hover:bg-white hover:text-mirage",
   };
 
