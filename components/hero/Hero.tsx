@@ -11,7 +11,7 @@ export default function Hero() {
   const { isMobile, isTablet, isDesktop } = useDeviceSize();
 
   return (
-    <section className="relative h-[748px] md:h-[992px]">
+    <section className="relative h-[748px] md:h-[992px] lg:h-[820px]">
       <Image
         src={`/images/homepage/hero-bg-mobile.jpg`}
         width={0}
@@ -36,23 +36,20 @@ export default function Hero() {
         alt="shrimp pasta in a plate"
         className="w-full h-full hidden lg:block"
       />
-      {/* <div className="absolute top-0 left-0 right-0 h-[200px] bg-[#181818] brightness-120 z-10">
-        
-      </div> */}
       <div 
         className={`
-          absolute top-[232px] md:top-[374px] left-0 right-0 
-          py-4 h-full
+          absolute top-[232px] md:top-[374px] lg:top-[65px] left-0 right-0 
+          py-4 h-full lg:px-[165px]
           text-white
-          flex flex-col items-center
+          flex flex-col items-center lg:items-start
         `}
       >
         <Logo />
         <div
           className={`
-            flex flex-col gap-[21px] justify-center items-center 
-            text-center 
-            px-6 md:px-10 mt-9
+            flex flex-col gap-[21px] justify-center items-center lg:justify-start lg:items-start
+            text-center lg:text-start
+            px-6 md:px-10 mt-9 lg:px-0 lg:mt-[153px] lg:max-w-[507px]
           `}
         >
           <div>
@@ -67,7 +64,7 @@ export default function Hero() {
           </div>
           <ItemDescription
             text="Experience our seasonal menu in beautiful country surroundings. Eat the freshest produce from the comfort of our farmhouse."
-            className="md:px-[58px]"
+            className="md:px-[58px] lg:px-0"
           />
         </div>
         <Button variant="outline" className="w-full max-w-[245px] mt-[53px]">Book a table</Button>

@@ -13,7 +13,7 @@ export default {
         "cod-gray": "hsl(0, 0%, 7%)",   //#111111
         "cod-gray-75": "hsla(0, 0%, 7%, 75%)",   //#111111
 
-        "mirage": "hsl(234, 30%, 13%)",   //#17192b
+        "mirage": "hsl(236, 30%, 13%)",   //#17192b
         "ebony-clay": "hsl(218, 21%, 18%)",   //#242b37
         "shuttle-gray": "hsl(217, 14%, 42%)",   //#5c6779
       },
