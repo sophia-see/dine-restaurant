@@ -24,7 +24,7 @@ export default function About() {
   return (
     <section>
       <div className="relative h-[662px] md:h-[690px]">
-        <AboutItem className="absolute top-[-72px] md:top-[-96px] lg:top-[-68px] h-full overflow-visible ">
+        <AboutItem className="absolute top-[-72px] md:top-[-96px] xl:top-[-68px] h-full overflow-visible ">
           <ImageContainer>
             <Image
               src={`/images/homepage/enjoyable-place-${currSize}.jpg`}
@@ -59,7 +59,7 @@ export default function About() {
           />
         </div>
       </div>
-      <AboutItem className='relative h-full pb-[101px] md:pb-[118px] xl:pb-0 xl:h-[640px] xl:overflow-visible'>
+      <AboutItem className='relative h-full pb-[101px] md:pb-[118px] xl:pb-0 xl:mt-[100px] xl:h-[640px] xl:overflow-visible'>
         <ImageContainer>
           <Image
             src={`/images/homepage/locally-sourced-${currSize}.jpg`}
@@ -80,7 +80,7 @@ export default function About() {
             />
           </div>
         </ImageContainer>
-        <ItemContainer className='lg:order-first'>
+        <ItemContainer className='xl:order-first'>
           <Divider />
           <Item>
             <ItemTitle

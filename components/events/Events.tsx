@@ -36,7 +36,7 @@ export default function Events() {
     <div
       className={`
         flex flex-col items-center xl:flex-row xl:gap-0
-        pt-[80px] xl:pt-[160px] pb-[124px] px-6 md:px-10 lg:px-[118px]
+        pt-[80px] xl:pt-[160px] pb-[124px] px-6 md:px-10 xl:px-[118px]
         relative 
       `}
     >
