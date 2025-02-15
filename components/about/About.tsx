@@ -69,7 +69,7 @@ export default function About() {
             alt="a freshly cooked food"
             className="w-full h-full shadow-[0_75px_100px_-50px_rgba(56,66,85,50%)]"
           />
-          <div className='absolute top-[70%] right-[-10%]'>
+          <div className='hidden md:block absolute top-[70%] right-[-10%]'>
             <Image
               src={"/images/patterns/pattern-lines.svg"}
               sizes='100vw'

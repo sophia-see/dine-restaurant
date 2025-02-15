@@ -16,8 +16,27 @@ function ItemContainer({children}: {children: React.ReactNode}) {
 
 function Item({children}: {children: React.ReactNode}) {
   return (
-    <div className='flex flex-col md:flex-row md:items-center gap-9'>
+    <div className='flex flex-col md:flex-row md:items-center gap-9 md:gap-10'>
       {children}
+    </div>
+  )
+}
+
+function ImageContainer({src, alt}: {src: string, alt: string}) {
+  return (
+    <div className='flex-shrink-0 w-full md:w-[160px] relative'>
+      <Image
+        src={src}
+        sizes='100vw'
+        width={0}
+        height={0}
+        className='w-full h-full md:w-[128px] md:h-[96px]'
+        alt={alt}
+      />
+      <div className='hidden md:block absolute top-[20%] right-0'>
+        <div className='h-[1px] w-[32px] bg-beaver'>
+        </div>
+      </div>
     </div>
   )
 }
@@ -33,12 +52,8 @@ export default function HighlightsItems() {
   >
     <ItemContainer>
       <Item>
-        <Image
+        <ImageContainer 
           src={`/images/homepage/salmon-${currSize}.jpg`}
-          sizes='100vw'
-          width={0}
-          height={0}
-          className='w-full h-auto md:w-[128px] md:h-[96px]'
           alt='seared salmon fillet in a plate'
         />
         <HighlightTexts>
@@ -50,13 +65,9 @@ export default function HighlightsItems() {
     </ItemContainer>
     <ItemContainer>
       <Item>
-        <Image
-          src={`/images/homepage/beef-${currSize}.jpg`}
-          sizes='100vw'
-          width={0}
-          height={0}
-          className='w-full h-auto md:w-[128px] md:h-[96px]'
-          alt='rosemary filet mignon in a plate'
+        <ImageContainer 
+            src={`/images/homepage/beef-${currSize}.jpg`}
+            alt='rosemary filet mignon in a plate'
         />
         <HighlightTexts>
           <HighlightTitle title='Rosemary Filet Mignon' />
@@ -67,13 +78,9 @@ export default function HighlightsItems() {
     </ItemContainer>
     <ItemContainer>
       <Item>
-        <Image
-          src={`/images/homepage/chocolate-${currSize}.jpg`}
-          sizes='100vw'
-          width={0}
-          height={0}
-          className='w-full h-auto md:w-[128px] md:h-[96px]'
-          alt='fruit chocolate mousse in a plate'
+        <ImageContainer 
+            src={`/images/homepage/chocolate-${currSize}.jpg`}
+            alt='fruit chocolate mousse in a plate'
         />
         <HighlightTexts>
           <HighlightTitle title='Summer Fruit Chocolate Mousse' />
