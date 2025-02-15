@@ -7,7 +7,8 @@ export default function HighlightIntro() {
   return (
     <div 
       className={`
-        flex flex-col gap-9  items-center justify-center text-center
+        flex flex-col gap-9 items-center justify-center text-center
+        md:px-[64px]
       `}
     >
       <Divider />

@@ -4,10 +4,11 @@ import HighlightTitle from './HighlightTitle'
 import HighlightDescription from './HighlightDescription'
 import HighlightDivider from './HighlightDivider'
 import HighlightTexts from './HighlightTexts'
+import useDeviceSize from '@/hooks/use-device-size'
 
 function ItemContainer({children}: {children: React.ReactNode}) {
   return (
-    <div className='flex flex-col gap-[54px]'>
+    <div className='flex flex-col gap-[54px] md:gap-[24px]'>
       {children}
     </div>
   )
@@ -15,27 +16,29 @@ function ItemContainer({children}: {children: React.ReactNode}) {
 
 function Item({children}: {children: React.ReactNode}) {
   return (
-    <div className='flex flex-col gap-9'>
+    <div className='flex flex-col md:flex-row md:items-center gap-9'>
       {children}
     </div>
   )
 }
 
 export default function HighlightsItems() {
+  const {currSize} = useDeviceSize();
+
   return (
   <div
     className={`
-      flex flex-col items-center justify-center
+      flex flex-col items-center justify-center md:gap-[24px]
     `}
   >
     <ItemContainer>
       <Item>
         <Image
-          src={"/images/homepage/salmon-mobile.jpg"}
+          src={`/images/homepage/salmon-${currSize}.jpg`}
           sizes='100vw'
           width={0}
           height={0}
-          className='w-full h-auto'
+          className='w-full h-auto md:w-[128px] md:h-[96px]'
           alt='seared salmon fillet in a plate'
         />
         <HighlightTexts>
@@ -48,11 +51,11 @@ export default function HighlightsItems() {
     <ItemContainer>
       <Item>
         <Image
-          src={"/images/homepage/beef-mobile.jpg"}
+          src={`/images/homepage/beef-${currSize}.jpg`}
           sizes='100vw'
           width={0}
           height={0}
-          className='w-full h-auto'
+          className='w-full h-auto md:w-[128px] md:h-[96px]'
           alt='rosemary filet mignon in a plate'
         />
         <HighlightTexts>
@@ -65,11 +68,11 @@ export default function HighlightsItems() {
     <ItemContainer>
       <Item>
         <Image
-          src={"/images/homepage/chocolate-mobile.jpg"}
+          src={`/images/homepage/chocolate-${currSize}.jpg`}
           sizes='100vw'
           width={0}
           height={0}
-          className='w-full h-auto'
+          className='w-full h-auto md:w-[128px] md:h-[96px]'
           alt='fruit chocolate mousse in a plate'
         />
         <HighlightTexts>

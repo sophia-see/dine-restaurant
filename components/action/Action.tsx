@@ -1,13 +1,18 @@
+"use client"
+
 import Image from 'next/image'
 import React from 'react'
 import ItemTitle from '../ItemTitle'
 import Button from '../Button'
+import useDeviceSize from '@/hooks/use-device-size'
 
 export default function Action() {
+  const {currSize} = useDeviceSize();
+
   return (
-    <div className='relative w-full h-[328px] flex justify-center items-center pt-[84px] pb-[80px] px-6 text-white'>
+    <div className='relative w-full h-[328px] md:h-[272px] flex justify-center items-center pt-[84px] pb-[80px] text-white'>
       <Image
-        src={"/images/homepage/ready-bg-mobile.jpg"}
+        src={`/images/homepage/ready-bg-${currSize}.jpg`}
         sizes='100vw'
         width={0}
         height={0}
@@ -16,7 +21,7 @@ export default function Action() {
       />
       <div className='px-[41px] flex flex-col gap-5 justify-center items-center text-center'>
         <ItemTitle title='Ready to make a reservation?' className='font-bold' />
-        <Button variant='outline' className='w-full'>Book a table</Button>
+        <Button variant='outline' className='w-full md:w-[245px]'>Book a table</Button>
       </div>
     </div>
   )

@@ -11,9 +11,9 @@ function FooterText({text}:{text: string}) {
 
 export default function Footer() {
   return (
-    <div className='pt-[80px] pb-[78px] bg-cod-gray text-white flex flex-col justify-center items-center gap-[42px] text-center'>
+    <div className='pt-[80px] pb-[78px] bg-cod-gray text-white flex flex-col md:flex-row md:justify-start md:items-start md:gap-[130px] md:px-10 justify-center items-center gap-[42px] text-center'>
       <Logo />
-      <div className='flex flex-col gap-8 justify-center items-center text-center'>
+      <div className='flex flex-col gap-8 justify-center items-center text-center md:text-start md:justify-start md:items-start'>
         <div>
           <FooterText text='Marthwaite, Sedbergh' />
           <FooterText text='Cumbria' />

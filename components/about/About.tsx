@@ -1,3 +1,5 @@
+"use client"
+
 import React from 'react'
 import Image from "next/image"
 import ItemTitle from '../ItemTitle'
@@ -6,14 +8,17 @@ import AboutItem from './AboutItem'
 import Divider from '../Divider'
 import Item from './Item'
 import ItemContainer from './ItemContainer'
+import useDeviceSize from '@/hooks/use-device-size'
 
 export default function About() {
+  const {currSize} = useDeviceSize();
+
   return (
     <section className='pb-[101px]'>
-      <div className="relative h-[662px]">
-        <AboutItem className="absolute top-[-72px]">
+      <div className="relative h-[662px] md:h-[675px] md:mb-[118px]">
+        <AboutItem className="absolute top-[-72px] md:top-[-96px]">
           <Image
-            src={"/images/homepage/enjoyable-place-mobile.jpg"}
+            src={`/images/homepage/enjoyable-place-${currSize}.jpg`}
             sizes="100vw"
             width={0}
             height={0}
@@ -36,7 +41,7 @@ export default function About() {
       </div>
       <AboutItem>
         <Image
-          src={"/images/homepage/locally-sourced-mobile.jpg"}
+          src={`/images/homepage/locally-sourced-${currSize}.jpg`}
           sizes="100vw"
           width={0}
           height={0}

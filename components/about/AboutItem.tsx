@@ -6,7 +6,7 @@ interface AboutItemsProps extends React.HTMLAttributes<HTMLDivElement> {
 
 export default function AboutItem({children, className, ...props}: AboutItemsProps) {
   return (
-    <div className={`mx-6 flex flex-col gap-[48px] text-ebony-clay ${className || ""}`}>
+    <div className={`mx-6 md:mx-[98px] flex flex-col gap-[48px] md:gap-[56px] text-ebony-clay ${className || ""}`}>
       {children}
     </div>
   )
