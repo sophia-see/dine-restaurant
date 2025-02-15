@@ -47,7 +47,7 @@ export default function HighlightsItems() {
   return (
   <div
     className={`
-      flex flex-col items-center justify-center md:gap-[24px]
+      flex flex-col items-center justify-center md:items-start md:gap-[24px]
     `}
   >
     <ItemContainer>
