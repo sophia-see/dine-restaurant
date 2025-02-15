@@ -45,18 +45,41 @@ export default function Events() {
     <div
       className={`
         flex flex-col items-center
-        pt-[80px] pb-[124px] mx-6 md:mx-10 
+        pt-[80px] pb-[124px] px-6 md:px-10 
+        relative
       `}
     >
-      <div className='w-full md:px-[58px]'>
+      <div className='hidden md:block absolute top-0 right-1/2'>
         <Image
-          src={`/images/homepage/${currentTab.images[currSize as "mobile" | "desktop"]}`}
+          src={"/images/patterns/pattern-curve-top-right.svg"}
           sizes='100vw'
           width={0}
           height={0}
-          className='w-full h-auto shadow-[0_75px_100px_-50px_rgba(56,66,85,50%)]'
-          alt={`image representing ${currentTab.name}`}
+          alt='pattern with curved at the top right'
+          className='w-auto h-[320px]'
         />
+      </div>
+      <div className='w-full md:px-[58px]'>
+        <div className='w-full h-[400px] md:h-[360px] relative'>
+          <Image
+            src={`/images/homepage/${currentTab.images[currSize as "mobile" | "desktop"]}`}
+            sizes='100vw'
+            width={0}
+            height={0}
+            className='w-full h-full shadow-[0_75px_100px_-50px_rgba(56,66,85,50%)]'
+            alt={`image representing ${currentTab.name}`}
+          />
+          <div className='hidden md:block absolute top-[-10%] left-[-10%]'>
+            <Image
+              src={"/images/patterns/pattern-lines.svg"}
+              sizes='100vw'
+              width={0}
+              height={0}
+              className='w-auto h-auto'
+              alt='lines pattern'
+            />
+          </div>
+        </div>
       </div>
       <div
         className={`
