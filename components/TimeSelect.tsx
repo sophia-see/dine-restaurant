@@ -11,18 +11,20 @@ export default function TimeSelect() {
       <select
         className="
           border-b border-[#8e8e8e] 
-          m-0 p-0 pl-[16px] pb-[14px] 
+          m-0 p-0 pl-[16px] pb-[14px]
           outline-none bg-transparent
           text-[20px] leading-[28px] text-cod-gray 
           appearance-none pr-6
+          cursor-pointer
+          peer
         "
         {...form.register("time.period")}
       >
-        <option value={TimePeriod.AM}>AM</option>
-        <option value={TimePeriod.PM}>PM</option>
+        <option className="bg-white text-cod-gray" value={TimePeriod.AM}>AM</option>
+        <option className="bg-white text-cod-gray" value={TimePeriod.PM}>PM</option>
       </select>
       <svg
-        className="absolute right-0 bottom-[16px] w-4 h-4 text-[#9E7F66] pointer-events-none"
+        className="absolute right-0 top-1 w-4 h-4 text-[#9E7F66] pointer-events-none"
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"

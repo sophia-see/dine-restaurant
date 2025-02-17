@@ -11,7 +11,7 @@ export default function Logo() {
       height={0}
       sizes="100vw"
       alt="logo of dine"
-      className="w-auto h-[32px]"
+      className="w-auto h-[32px] cursor-pointer"
       onClick={() => redirect("/")}
     />
   )

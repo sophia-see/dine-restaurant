@@ -97,7 +97,7 @@ export default function Events() {
                   <div className={`h-[1px] w-[97px] mr-[31px] ${isCurrentTab ? "bg-beaver" : "bg-transparent"}`}>
                   </div>
                 </div>
-                <span className={`font-semibold text-[17px] leading-[28px] tracking-[2.5px] text-[#4c4c4c] ${isCurrentTab ? "" : "opacity-50"}`}>
+                <span className={`font-semibold text-[17px] leading-[28px] tracking-[2.5px] text-[#4c4c4c] ${isCurrentTab ? "" : "opacity-50 hover:opacity-80"}`}>
                   {e.name.toUpperCase()}
                 </span>
                 <div className={`mt-[7px] h-[1px] w-[48px] xl:hidden ${isCurrentTab ? "bg-beaver" : "bg-transparent"}`}>
