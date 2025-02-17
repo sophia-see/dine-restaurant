@@ -19,7 +19,6 @@ export default function Home() {
       <Highlights />
       <Events />
       <Action />
-      <Footer />
     </div>
   );
 }

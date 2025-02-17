@@ -12,7 +12,7 @@ import useDeviceSize from '@/hooks/use-device-size'
 
 function ImageContainer ({children}: {children:React.ReactNode}) {
   return (
-    <div className='xl:flex-shrink-0 relative h-[400px] md:h-[360px] xl:h-[720px] xl:w-[540px]'>
+    <div className='xl:flex-shrink-0 relative h-[400px] md:h-[360px] lg:h-[480px] xl:h-[720px] xl:w-[540px]'>
       {children}
     </div>
   )

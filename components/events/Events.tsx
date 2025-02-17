@@ -6,6 +6,7 @@ import ItemTitle from '../ItemTitle';
 import ItemDescription from '../ItemDescription';
 import Button from '../Button';
 import useDeviceSize from '@/hooks/use-device-size';
+import { redirect } from 'next/navigation';
 
 const EVENTS = [
   {
@@ -31,6 +32,10 @@ const EVENTS = [
 export default function Events() {
   const {currSize} = useDeviceSize();
   const [currentTab, setCurrentTab] = React.useState(EVENTS[0]);
+
+  const onClickBook = () => {
+    redirect("/booking")
+  }
 
   return (
     <div
@@ -105,7 +110,7 @@ export default function Events() {
           <ItemTitle title={currentTab.name} className='font-bold' />
           <ItemDescription text={currentTab.description} />
         </div>
-        <Button className='w-[245px] mt-[27px] md:mt-[60px]'>Book a table</Button>
+        <Button className='w-[245px] mt-[27px] md:mt-[60px]' onClick={onClickBook}>Book a table</Button>
       </div>
     </div>
   )

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { League_Spartan } from "next/font/google";
 import "./globals.css";
+import Footer from "@/components/footer/Footer";
 
 const leagueSpartan = League_Spartan({
   subsets: ["latin"],
@@ -21,7 +22,14 @@ export default function RootLayout({
       <body
         className={`${leagueSpartan.className} antialiased`}
       >
-        {children}
+        <div 
+          className={`
+            h-full min-h-screen w-full min-w-screen
+          `}
+        >
+          {children}  
+          <Footer />
+        </div>
       </body>
     </html>
   );

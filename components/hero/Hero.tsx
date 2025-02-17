@@ -5,8 +5,13 @@ import ItemDescription from "@/components/ItemDescription";
 import ItemTitle from "@/components/ItemTitle";
 import Image from "next/image";
 import Logo from "../Logo";
+import { redirect } from "next/navigation";
 
 export default function Hero() {
+  const onClickBook = () => {
+    redirect("/booking")
+  }
+
   return (
     <section className="relative h-[748px] md:h-[992px] xl:h-[820px]">
       <Image
@@ -64,7 +69,7 @@ export default function Hero() {
             className="md:px-[58px] xl:px-0"
           />
         </div>
-        <Button variant="outline" className="w-full max-w-[245px] mt-[53px]">Book a table</Button>
+        <Button variant="outline" className="w-full max-w-[245px] mt-[53px]" onClick={onClickBook}>Book a table</Button>
       </div>
     </section>
   )
