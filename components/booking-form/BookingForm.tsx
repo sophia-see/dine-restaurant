@@ -11,6 +11,7 @@ import { z } from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod';
 import FormError from '../FormError'
 import InputWrapper from '../InputWrapper'
+import Image from 'next/image'
 
 export enum TimePeriod {
   AM = "AM",
@@ -60,8 +61,8 @@ export default function BookingForm() {
       name: "",
       email: "",
       date: {
-        month: ((new Date()).getMonth() + 1).toString(),
-        day: (new Date()).getDate().toString(),
+        month: ((new Date()).getMonth() + 1).toString(), //this month
+        day: ((new Date()).getDate() + 1).toString(), //next day
         year: (new Date()).getFullYear().toString(),
       },
       time: {
@@ -90,10 +91,28 @@ export default function BookingForm() {
   return (
     <FormProvider {...form} >
       <form onSubmit={form.handleSubmit(onSubmit)}>
-        <div className='relative h-full min-h-[560px] xl-1440:min-h-[320px] xl-1440:mx-[165px]'>
+        <div className='relative h-full min-h-[560px] xl-1440:min-h-[320px] '>
+          <div className='w-full h-full relative'>
+            <Image
+              src={"/images/patterns/pattern-curve-bottom-right.svg"}
+              width={0}
+              height={0}
+              sizes='100vw'
+              className='hidden xl-1440:block w-[70%] h-full'
+              alt='pattern'
+            />
+            <Image
+              src={"/images/patterns/pattern-lines.svg"}
+              width={0}
+              height={0}
+              sizes='100vw'
+              className='hidden xl-1440:block w-auto h-auto absolute bottom-[20%] left-[45%]'
+              alt='pattern'
+            />
+          </div>
           <div 
             className={`
-              max-w-[540px]
+              max-w-[540px] xl-1440:mx-[165px]
               mx-[24px] py-[34px] px-[32px]
               absolute top-[-25%] left-0 right-0 xl-1440:top-[-110%]
               shadow-[0_75px_100px_-50px_rgba(56,66,85,50%)] bg-white
@@ -176,7 +195,7 @@ export default function BookingForm() {
             </InputWrapper>
             <Button type='submit'>Make Reservation</Button>
           </div>
-        </div>
+          </div>
       </form>
     </FormProvider>
   )
