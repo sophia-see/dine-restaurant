@@ -86,6 +86,7 @@ export default function BookingForm() {
     form.formState.errors.time?.minute?.message;
 
   const onSubmit = (data: z.infer<typeof formSchema>) => {
+    console.log({data})
   }
 
   return (
