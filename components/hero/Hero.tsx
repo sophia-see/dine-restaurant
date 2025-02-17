@@ -5,11 +5,8 @@ import ItemDescription from "@/components/ItemDescription";
 import ItemTitle from "@/components/ItemTitle";
 import Image from "next/image";
 import Logo from "../Logo";
-import useDeviceSize from "@/hooks/use-device-size";
 
 export default function Hero() {
-  const { isMobile, isTablet, isDesktop } = useDeviceSize();
-
   return (
     <section className="relative h-[748px] md:h-[992px] xl:h-[820px]">
       <Image
