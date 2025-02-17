@@ -90,13 +90,15 @@ export default function BookingForm() {
   return (
     <FormProvider {...form} >
       <form onSubmit={form.handleSubmit(onSubmit)}>
-        <div className='relative h-full min-h-[560px]'>
+        <div className='relative h-full min-h-[560px] xl-1440:min-h-[320px] xl-1440:mx-[165px]'>
           <div 
             className={`
-              mx-[24px] py-[34px] px-[32px] 
-              absolute top-[-25%] left-0 right-0 
+              max-w-[540px]
+              mx-[24px] py-[34px] px-[32px]
+              absolute top-[-25%] left-0 right-0 xl-1440:top-[-110%]
               shadow-[0_75px_100px_-50px_rgba(56,66,85,50%)] bg-white
               flex flex-col gap-[34px]
+              md:place-self-center xl-1440:place-self-end
             `}
           >
             <InputWrapper>

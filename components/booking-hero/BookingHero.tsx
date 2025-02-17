@@ -13,7 +13,7 @@ export default function BookingHero() {
 
   return (
     <div>
-      <div className='h-[600px] w-full relative'>
+      <div className='h-[600px] relative'>
         <Image
           src={`/images/booking/hero-bg-${currSize}@2x.jpg`}
           sizes='100vw'
@@ -23,13 +23,21 @@ export default function BookingHero() {
           className='w-full h-full brightness-[75%]'
           priority
         />
-        <div className='absolute top-[56px] left-0 right-0 px-[24px] flex flex-col items-center text-center text-white'>
+        <div 
+          className={`
+            absolute top-[56px] left-0 right-0 
+            mx-[24px] xl-1440:mx-[165px]
+            flex flex-col items-center text-center 
+            xl-1440:items-start xl-1440:text-start
+            text-white
+          `}
+          >
           <Logo />
-          <div className='mt-[44px] mb-[19px] flex flex-col gap-[13px]'>
+          <div className='w-full mt-[44px] xl-1440:mt-[153px] mb-[19px] flex flex-col gap-[13px] xl:max-w-[80%] xl-1440:max-w-[445px]'>
             <ItemTitle title='Reservations' />
             <ItemDescription text='We can’t wait to host you. If you have any special requirements please feel free to call on the phone number below. We’ll be happy to accommodate you.' />
           </div>
-          <Button variant='outline' className='w-full max-w-[245px]'>Reserve Place</Button>
+          <Button variant='outline' className='xl-1440:hidden w-full max-w-[245px]'>Reserve Place</Button>
         </div>
       </div>
     </div>

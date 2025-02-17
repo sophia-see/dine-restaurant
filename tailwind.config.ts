@@ -8,6 +8,9 @@ export default {
   ],
   theme: {
     extend: {
+      screens: {
+        "xl-1440": "1440px",
+      },
       colors: {
         "beaver": "hsl(27, 22%, 51%)",  //#9e7f66
         "cod-gray": "hsl(0, 0%, 7%)",   //#111111
