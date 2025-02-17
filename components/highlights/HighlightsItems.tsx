@@ -53,7 +53,7 @@ export default function HighlightsItems() {
     <ItemContainer>
       <Item>
         <ImageContainer 
-          src={`/images/homepage/salmon-${currSize}.jpg`}
+          src={`/images/homepage/salmon-${currSize}@2x.jpg`}
           alt='seared salmon fillet in a plate'
         />
         <HighlightTexts>
@@ -66,7 +66,7 @@ export default function HighlightsItems() {
     <ItemContainer>
       <Item>
         <ImageContainer 
-            src={`/images/homepage/beef-${currSize}.jpg`}
+            src={`/images/homepage/beef-${currSize}@2x.jpg`}
             alt='rosemary filet mignon in a plate'
         />
         <HighlightTexts>
@@ -79,7 +79,7 @@ export default function HighlightsItems() {
     <ItemContainer>
       <Item>
         <ImageContainer 
-            src={`/images/homepage/chocolate-${currSize}.jpg`}
+            src={`/images/homepage/chocolate-${currSize}@2x.jpg`}
             alt='fruit chocolate mousse in a plate'
         />
         <HighlightTexts>

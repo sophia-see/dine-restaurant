@@ -12,7 +12,7 @@ export default function Action() {
   return (
     <div className='relative w-full h-[328px] md:h-[272px] xl:h-[240px] flex justify-center items-center pt-[84px] pb-[80px] text-white'>
       <Image
-        src={`/images/homepage/ready-bg-${currSize}.jpg`}
+        src={`/images/homepage/ready-bg-${currSize}@2x.jpg`}
         sizes='100vw'
         width={0}
         height={0}

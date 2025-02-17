@@ -27,7 +27,7 @@ export default function About() {
         <AboutItem className="absolute top-[-72px] md:top-[-96px] xl:top-[-68px] h-full overflow-visible ">
           <ImageContainer>
             <Image
-              src={`/images/homepage/enjoyable-place-${currSize}.jpg`}
+              src={`/images/homepage/enjoyable-place-${currSize}@2x.jpg`}
               sizes="100vw"
               width={0}
               height={0}
@@ -62,7 +62,7 @@ export default function About() {
       <AboutItem className='relative h-full pb-[101px] md:pb-[118px] xl:pb-0 xl:mt-[100px] xl:h-[640px] xl:overflow-visible'>
         <ImageContainer>
           <Image
-            src={`/images/homepage/locally-sourced-${currSize}.jpg`}
+            src={`/images/homepage/locally-sourced-${currSize}@2x.jpg`}
             sizes="100vw"
             width={0}
             height={0}

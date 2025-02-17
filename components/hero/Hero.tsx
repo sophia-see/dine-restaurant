@@ -10,7 +10,7 @@ export default function Hero() {
   return (
     <section className="relative h-[748px] md:h-[992px] xl:h-[820px]">
       <Image
-        src={`/images/homepage/hero-bg-mobile.jpg`}
+        src={`/images/homepage/hero-bg-mobile@2x.jpg`}
         width={0}
         height={0}
         sizes="100vw"
@@ -18,7 +18,7 @@ export default function Hero() {
         className="w-full h-full md:hidden"
       />
       <Image
-        src={`/images/homepage/hero-bg-tablet.jpg`}
+        src={`/images/homepage/hero-bg-tablet@2x.jpg`}
         width={0}
         height={0}
         sizes="100vw"
@@ -26,7 +26,7 @@ export default function Hero() {
         className="w-full h-full hidden md:max-xl:block xl:hidden"
       />
       <Image
-        src={`/images/homepage/hero-bg-desktop.jpg`}
+        src={`/images/homepage/hero-bg-desktop@2x.jpg`}
         width={0}
         height={0}
         sizes="100vw"
