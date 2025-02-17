@@ -1,5 +1,8 @@
+"use client"
+
 import React from 'react'
 import Image from "next/image"
+import { redirect } from 'next/navigation'
 export default function Logo() {
   return (
     <Image
@@ -9,6 +12,7 @@ export default function Logo() {
       sizes="100vw"
       alt="logo of dine"
       className="w-auto h-[32px]"
+      onClick={() => redirect("/")}
     />
   )
 }

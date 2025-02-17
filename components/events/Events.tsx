@@ -110,7 +110,7 @@ export default function Events() {
           <ItemTitle title={currentTab.name} className='font-bold' />
           <ItemDescription text={currentTab.description} />
         </div>
-        <Button className='w-[245px] mt-[27px] md:mt-[60px]' onClick={onClickBook}>Book a table</Button>
+        <Button className='w-full max-w-[245px] mt-[27px] md:mt-[60px]' onClick={onClickBook}>Book a table</Button>
       </div>
     </div>
   )
