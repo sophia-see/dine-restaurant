@@ -144,20 +144,25 @@ export default function BookingForm() {
               )}
             </InputWrapper>
             <InputWrapper>
-              <InputLabel label='Pick a date' />
-              <div className='flex justify-between items-center gap-3'>
-                <Input
-                  placeholder='MM'
-                  {...(form.register("date.month"))}
-                />
-                <Input
-                  placeholder='DD'
-                  {...(form.register("date.day"))}
-                />
-                <Input
-                  placeholder='YYYY'
-                  {...(form.register("date.year"))}
-                />
+              <div className='flex flex-col items-center justify-center gap-2 lg:flex-row'>
+                <InputLabel label='Pick a date'  className='lg:flex-shrink-0 lg:mr-[60px]'/>
+                <div className='flex justify-between items-center gap-3'>
+                  <Input
+                    placeholder='MM'
+                    {...(form.register("date.month"))}
+                    className={"lg:w-[100px]"}
+                  />
+                  <Input
+                    placeholder='DD'
+                    {...(form.register("date.day"))}
+                    className={"lg:w-[100px]"}
+                  />
+                  <Input
+                    placeholder='YYYY'
+                    {...(form.register("date.year"))}
+                    className={"lg:w-[100px]"}
+                  />
+                </div>
               </div>
               {dateError && (
                 <div>
@@ -166,19 +171,24 @@ export default function BookingForm() {
               )}
             </InputWrapper>
             <InputWrapper>
-              <InputLabel label='Pick a time' />
-              <div className='flex justify-between items-center gap-3'>
-                <Input
-                  placeholder='09'
-                  {...(form.register("time.hour"))}
+              <div className='flex flex-col items-center justify-center gap-2 lg:flex-row'>
+                <InputLabel label='Pick a time' className='lg:flex-shrink-0 lg:mr-[60px]'/>
+                <div className='flex justify-between items-center gap-3'>
+                  <Input
+                    placeholder='09'
+                    {...(form.register("time.hour"))}
+                    className={"lg:w-[100px]"}
 
-                />
-                <Input
-                  placeholder='00'
-                  {...(form.register("time.minute"))}
+                  />
+                  <Input
+                    placeholder='00'
+                    {...(form.register("time.minute"))}
+                    className={"lg:w-[100px]"}
 
-                />
-                <TimeSelect />
+                  />
+                  <TimeSelect />
+                </div>
+
               </div>
               {timeError && (
                 <div>

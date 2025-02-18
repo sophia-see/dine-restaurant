@@ -33,6 +33,7 @@ export default function TimeSelect() {
     <div className="relative w-fit" ref={dropdownRef}>
       <button
         className="
+          lg:w-[100px]
           border-b border-[#8e8e8e] 
           m-0 p-0 pl-[16px] pb-[14px]
           outline-none bg-transparent
