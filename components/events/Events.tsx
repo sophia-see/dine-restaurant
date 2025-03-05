@@ -42,7 +42,7 @@ export default function Events() {
       className={`
         flex flex-col items-center xl:flex-row xl:gap-0
         pt-[80px] xl:pt-[160px] pb-[124px] px-6 md:px-10 xl:px-[118px]
-        relative 
+        relative xl:max-w-[1600px] xl:mx-auto
       `}
     >
       <div className='hidden md:block absolute top-0 left-0 right-1/2 xl:right-[60%]'>

@@ -21,10 +21,10 @@ export default function Action() {
         sizes='100vw'
         width={0}
         height={0}
-        className='w-full h-full absolute inset-0 -z-10'
+        className='w-full h-full absolute inset-0 -z-10 object-cover object-center'
         alt='food background'
       />
-      <div className='w-full px-[41px] md:px-[66px] xl:px-[165px] flex flex-col xl:flex-row gap-5 justify-center xl:justify-between items-center text-center xl:text-start'>
+      <div className='w-full px-[41px] md:px-[66px] xl:px-[165px] flex flex-col xl:flex-row gap-5 justify-center xl:justify-between items-center text-center xl:text-start xl:max-w-[1600px] xl:mx-auto'>
         <ItemTitle title='Ready to make a reservation?' className='font-bold' />
         <Button variant='outline' className='w-full md:w-[245px]' onClick={onClickBook}>Book a table</Button>
       </div>

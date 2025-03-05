@@ -20,7 +20,7 @@ export default function BookingHero() {
           width={0}
           height={0}
           alt="food background"
-          className='w-full h-full brightness-[75%]'
+          className='object-cover object-center w-full h-full brightness-[75%]'
           priority
         />
         <div 
@@ -30,6 +30,7 @@ export default function BookingHero() {
             flex flex-col items-center text-center 
             xl-1440:items-start xl-1440:text-start
             text-white
+            2xl:max-w-[1600px] 2xl:mx-auto
           `}
           >
           <Logo />

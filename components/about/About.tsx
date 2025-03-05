@@ -23,7 +23,7 @@ export default function About() {
 
   return (
     <section>
-      <div className="relative h-[662px] md:h-[690px]">
+      <div className="relative h-[662px] md:h-[690px]  xl:max-w-[1600px] xl:mx-auto">
         <AboutItem className="absolute top-[-72px] md:top-[-96px] xl:top-[-68px] h-full overflow-visible ">
           <ImageContainer>
             <Image
@@ -59,7 +59,7 @@ export default function About() {
           />
         </div>
       </div>
-      <AboutItem className='relative h-full pb-[101px] md:pb-[118px] xl:pb-0 xl:mt-[100px] xl:h-[640px] xl:overflow-visible'>
+      <AboutItem className='relative h-full pb-[101px] md:pb-[118px] xl:pb-0 xl:mt-[100px] xl:h-[640px] xl:overflow-visible xl:max-w-[1600px] xl:mx-auto'>
         <ImageContainer>
           <Image
             src={`/images/homepage/locally-sourced-${currSize}@2x.jpg`}

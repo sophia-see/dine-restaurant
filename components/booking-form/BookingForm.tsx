@@ -92,14 +92,14 @@ export default function BookingForm() {
   return (
     <FormProvider {...form} >
       <form onSubmit={form.handleSubmit(onSubmit)}>
-        <div className='relative h-full min-h-[560px] xl-1440:min-h-[320px] '>
+        <div className='relative h-full min-h-[560px] xl-1440:min-h-[320px] 2xl:max-h-[320px] 2xl:max-w-[1600px] 2xl:mx-auto'>
           <div className='w-full h-full relative'>
             <Image
               src={"/images/patterns/pattern-curve-bottom-right.svg"}
               width={0}
               height={0}
               sizes='100vw'
-              className='hidden xl-1440:block w-[70%] h-full'
+              className='hidden xl-1440:block w-[70%] h-full 2xl:hidden'
               alt='pattern'
             />
             <Image
@@ -107,18 +107,18 @@ export default function BookingForm() {
               width={0}
               height={0}
               sizes='100vw'
-              className='hidden xl-1440:block w-auto h-auto absolute bottom-[20%] left-[45%]'
+              className='hidden xl-1440:block w-auto h-auto absolute bottom-[20%] left-[45%] 2xl:hidden'
               alt='pattern'
             />
           </div>
           <div 
             className={`
-              max-w-[540px] xl-1440:mx-[165px]
+              max-w-[540px] xl-1440:mx-[165px] 
               mx-[24px] py-[34px] px-[32px]
-              absolute top-[-25%] left-0 right-0 xl-1440:top-[-110%]
+              absolute top-[-25%] left-0 right-0 xl-1440:top-[-110%] 2xl:top-[50%]
               shadow-[0_75px_100px_-50px_rgba(56,66,85,50%)] bg-white
               flex flex-col gap-[34px]
-              md:place-self-center xl-1440:place-self-end
+              md:place-self-center xl-1440:place-self-end 2xl:place-self-center
             `}
           >
             <InputWrapper>

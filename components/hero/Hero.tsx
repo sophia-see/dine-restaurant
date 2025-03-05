@@ -20,7 +20,7 @@ export default function Hero() {
         height={0}
         sizes="100vw"
         alt="shrimp pasta in a plate"
-        className="w-full h-full md:hidden"
+        className="object-cover object-center w-full h-full md:hidden"
       />
       <Image
         src={`/images/homepage/hero-bg-tablet@2x.jpg`}
@@ -28,7 +28,7 @@ export default function Hero() {
         height={0}
         sizes="100vw"
         alt="shrimp pasta in a plate"
-        className="w-full h-full hidden md:max-xl:block xl:hidden"
+        className="object-cover object-center w-full h-full hidden md:max-xl:block xl:hidden"
       />
       <Image
         src={`/images/homepage/hero-bg-desktop@2x.jpg`}
@@ -36,7 +36,7 @@ export default function Hero() {
         height={0}
         sizes="100vw"
         alt="shrimp pasta in a plate"
-        className="w-full h-full hidden xl:block"
+        className="object-cover object-center w-full h-full hidden xl:block"
       />
       <div 
         className={`
@@ -44,6 +44,7 @@ export default function Hero() {
           py-4 h-full xl:px-[165px]
           text-white
           flex flex-col items-center xl:items-start
+          xl:max-w-[1600px] xl:mx-auto
         `}
       >
         <Logo />
